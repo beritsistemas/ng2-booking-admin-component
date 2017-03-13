@@ -1,0 +1,19 @@
+.serverWait{
+    background-color: #ccc;
+}
+.fieldEditable{
+    width: 100%;
+    display: inline;
+}
+.title{
+    font-size: 10px;
+    color: gray;
+    display: block;
+    width: 100%;
+}
+.title_inline{
+display: inline;
+}
+input{
+    width: 100%;
+}

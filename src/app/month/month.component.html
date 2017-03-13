@@ -1,0 +1,217 @@
+   <div id="calendar" class=" animated animated-sm bounceInUp">
+               
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="calendar fc fc-ltr">
+                            <table class="fc-header" style="width:100%">
+                                <tbody>
+                                    <tr>
+                                        <td class="fc-header-left">
+                                            <div class="btn-group">
+                                                <button type="button" class="fc-button-prev fc-corner-left btn btn-default btn-sm" (click)="addMonth(-1)"> <i class="fa fa-chevron-left"></i>
+
+                                                </button>
+                                                <button type="button" class="btn btn-default btn-sm" (click)="addMonth(1)"> <i class="fa fa-chevron-right"></i>
+
+                                                </button>
+                                            </div> <span class="fc-button fc-button-prev fc-state-default fc-corner-left" unselectable="on"><span class="fc-text-arrow">‹</span></span> <span class="fc-button fc-button-next fc-state-default fc-corner-right" unselectable="on"><span class="fc-text-arrow">›</span></span> <span class="fc-header-space"></span><span class="fc-button fc-button-today fc-state-default fc-corner-left fc-corner-right fc-state-disabled" unselectable="on">today</span>
+
+                                        </td>
+                                        <td class="fc-header-center">
+                                             <span class="fc-header-title">        
+                                              <h2>{{yearmonth}}</h2>  
+                                              
+                                              </span>
+                                        </td>
+                                        <!--td class="fc-header-right"> <span class="fc-button fc-button-month fc-state-default fc-corner-left fc-state-active" unselectable="on">month</span><span class="fc-button fc-button-agendaWeek fc-state-default" unselectable="on">week</span><span class="fc-button fc-button-agendaDay fc-state-default fc-corner-right" unselectable="on">day</span>
+
+                                        </td-->
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="fc-content" style="position: relative; min-height: 1px;">
+                                <div class="fc-view fc-view-month fc-grid" style="position: relative; min-height: 1px;" unselectable="on">
+                                   
+         
+
+
+
+                                    <table class="fc-border-separate" style="width:100%" cellspacing="0" *ngIf="!serverWait" >
+                                        <thead>
+                                            <tr class="fc-first fc-last">
+                                                <th class="fc-day-header fc-mon fc-widget-header  fc-first" style="width: 158px;">Mon</th>
+                                                <th class="fc-day-header fc-tue fc-widget-header" style="width: 158px;">Tue</th>
+                                                <th class="fc-day-header fc-wed fc-widget-header" style="width: 158px;">Wed</th>
+                                                <th class="fc-day-header fc-thu fc-widget-header" style="width: 158px;">Thu</th>
+                                                <th class="fc-day-header fc-fri fc-widget-header" style="width: 158px;">Fri</th>
+                                                <th class="fc-day-header fc-sat fc-widget-header " style="width: 158px;">Sat</th>
+                                                <th class="fc-day-header fc-sun fc-widget-header fc-last" style="width: 158px;">Sun</th>
+                                              
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="fc-week fc-first">
+                                               
+                                                <td class="fc-day fc-mon fc-widget-content  fc-first" id="td_fila0101">
+                                                    <app-day-field #fila0101 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-tue fc-widget-content " id="td_fila0102">
+                                                     <app-day-field #fila0102 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-wed fc-widget-content" id="td_fila0103">                                                    
+                                                     <app-day-field #fila0103 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-thu fc-widget-content" id="td_fila0104">
+                                                    
+                                                     <app-day-field #fila0104 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-fri fc-widget-content" id="td_fila0105">                                                    
+                                                     <app-day-field #fila0105 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-sat fc-widget-content " id="td_fila0106">
+                                                     <app-day-field #fila0106 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                 <td class="fc-day fc-sun fc-widget-content  fc-last " id="td_fila0100">
+                                                   
+                                                    <app-day-field #fila0100 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                            </tr>
+                                            <tr class="fc-week">
+                                                
+                                                <td class="fc-day fc-mon fc-widget-content   fc-first" >
+                                                    <app-day-field #fila0201 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-tue fc-widget-content " >
+                                                     <app-day-field #fila0202 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-wed fc-widget-content" >                                                    
+                                                     <app-day-field #fila0203 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-thu fc-widget-content" >
+                                                    
+                                                     <app-day-field #fila0204 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-fri fc-widget-content" >                                                    
+                                                     <app-day-field #fila0205 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-sat fc-widget-content " >
+                                                     <app-day-field #fila0206 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-sun fc-widget-content  fc-last" >                                                   
+                                                    <app-day-field #fila0200 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                            </tr>
+                                            <tr class="fc-week">
+                                                   
+                                                <td class="fc-day fc-mon fc-widget-content  fc-first" >
+                                                    <app-day-field #fila0301 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-tue fc-widget-content " >
+                                                     <app-day-field #fila0302 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-wed fc-widget-content" >                                                    
+                                                     <app-day-field #fila0303 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-thu fc-widget-content" >
+                                                    
+                                                     <app-day-field #fila0304 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-fri fc-widget-content" >                                                    
+                                                     <app-day-field #fila0305 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-sat fc-widget-content" >
+                                                     <app-day-field #fila0306 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                    <td class="fc-day fc-sun fc-widget-content  fc-last" >                                                   
+                                                    <app-day-field #fila0300 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                            </tr>
+                                            <tr class="fc-week">
+                                                       <td class="fc-day fc-mon fc-widget-content  fc-first" >
+                                                    <app-day-field #fila0401 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-tue fc-widget-content " >
+                                                     <app-day-field #fila0402 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-wed fc-widget-content" >                                                    
+                                                     <app-day-field #fila0403 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-thu fc-widget-content" >
+                                                    
+                                                     <app-day-field #fila0404 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-fri fc-widget-content" >                                                    
+                                                     <app-day-field #fila0405 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-sat fc-widget-content " >
+                                                     <app-day-field #fila0406 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                 <td class="fc-day fc-sun fc-widget-content  fc-last " >
+                                                   
+                                                    <app-day-field #fila0400 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                            </tr>
+                                             <tr class="fc-week">
+                                                       <td class="fc-day fc-mon fc-widget-content  fc-first" >
+                                                    <app-day-field #fila0501 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-tue fc-widget-content " >
+                                                     <app-day-field #fila0502 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-wed fc-widget-content" >                                                    
+                                                     <app-day-field #fila0503 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-thu fc-widget-content" >
+                                                    
+                                                     <app-day-field #fila0504 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-fri fc-widget-content" >                                                    
+                                                     <app-day-field #fila0505 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-sat fc-widget-content " >
+                                                     <app-day-field #fila0506 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                 <td class="fc-day fc-sun fc-widget-content  fc-last " >
+                                                   
+                                                    <app-day-field #fila0500 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                            </tr>
+                                            <tr class="fc-week fc-last">
+                                                       <td class="fc-day fc-mon fc-widget-content  fc-first" >
+                                                    <app-day-field #fila0601 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-tue fc-widget-content " >
+                                                     <app-day-field #fila0602 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-wed fc-widget-content" >                                                    
+                                                     <app-day-field #fila0603 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-thu fc-widget-content" >
+                                                    
+                                                     <app-day-field #fila0604 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-fri fc-widget-content" >                                                    
+                                                     <app-day-field #fila0605 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                <td class="fc-day fc-sat fc-widget-content " >
+                                                     <app-day-field #fila0606 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                                 <td class="fc-day fc-sun fc-widget-content  fc-last " >
+                                                   
+                                                    <app-day-field #fila0600 (dayInfoChange)="dayInfoChangeListener($event)" ></app-day-field>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                        <div *ngIf="serverWait" class="spinDiv">
+                                            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                                        </div>
+
+
+                                      </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
